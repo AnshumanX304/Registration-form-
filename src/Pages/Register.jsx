@@ -13,7 +13,18 @@ const Register = () => {
         try{
             const {data}=await axios.post('http://localhost:4000/users/register',{
                 ...values,
+            },{
+                withCedentials:true
             });
+            if(data){
+                if(data.errors){
+
+                }else{
+
+                }
+                 
+            }
+            console.log(data);
         }
         catch(err){
             console.log(err);
